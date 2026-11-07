@@ -1,0 +1,31 @@
+{
+  "model": "dit",
+  "dataset": "celeba32",
+  "data": {
+    "root": "./data",
+    "image_dir": "./data/celeba32",
+    "download": false
+  },
+  "output_root": "./results",
+  "subset_size": 10000,
+  "num_subsets": 2,
+  "run_suffixes": [
+    "",
+    "_b",
+    "_c"
+  ],
+  "device": "auto",
+  "resume": true,
+  "preview_every": 10,
+  "training": {
+    "epochs": 400,
+    "batch_size": 32,
+    "lr": 0.0002,
+    "weight_decay": 0.05,
+    "diffusion_steps": 1000,
+    "sample_steps": 100,
+    "seed": 0,
+    "amp": true
+  },
+  "architecture": {}
+}

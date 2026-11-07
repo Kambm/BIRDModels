@@ -1,0 +1,31 @@
+{
+  "analytical_model": "wiener",
+  "dataset": "celeba32",
+  "data": {
+    "root": "./data",
+    "image_dir": "./data/celeba32",
+    "download": false
+  },
+  "output_root": "./results",
+  "subset_size": 10000,
+  "num_subsets": 2,
+  "device": "auto",
+  "seed": 0,
+  "source_batch_size": 8,
+  "calibration": {
+    "source_size": 5000,
+    "validation_size": 2000,
+    "validation_count": 2000,
+    "randomize": false,
+    "minimum": 10,
+    "min_increment": 4,
+    "fraction_increment": 0.05,
+    "batch_size": 8
+  },
+  "generation": {
+    "num_samples": 100,
+    "batch_size": 8,
+    "method": "euler",
+    "filename_template": "subset{subset}.pt"
+  }
+}
